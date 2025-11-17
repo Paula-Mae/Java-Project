@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class Program1_NameAge {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+        
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        
+        System.out.println("\n=== Personalized Greeting ===");
+        System.out.println("Hello, " + name + "!");
+        System.out.println("You are " + age + " years old.");
+        
+        if (age < 18) {
+            System.out.println("You're young and full of potential!");
+        } else if (age < 60) {
+            System.out.println("You're in your prime years!");
+        } else {
+            System.out.println("Wisdom comes with age!");
+        }
+        
+        sc.close();
+    }
+}
+
+        this.name = name;
+        this.price = price;
+    }
+    
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("Product: %-20s Price: $%.2f", name, price);
+    }
+}
+
